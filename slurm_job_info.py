@@ -1,17 +1,16 @@
 #!/usr/env/bin python
 
-#title         :releaseHeldJobs.py 
-#description   :checks status of slurm job array and releases pending held jobs
+#title         :slurm_job_info.py 
+#description   :checks attributes of cluster job using slurm scontrol
 #author        :Firas Said Midani
-#date          :2015.04.24
+#date          :2015.11.23
 #version       :1.0
-#usage         :python releaseHeldJobs.py 
-#arguments     :text file with job array number
+#usage         :python slurm_job_info.py [job id] [job attribute] 
 
 # given a job_array_main_id 
 # grab information about all jobs in the array from slurm
 
-##INPUT 
+##arguments
 # job id
 # desired attribute (any attribute that "scontrol show job" would return about a job)
 
