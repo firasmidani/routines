@@ -10,20 +10,13 @@
 
 # given a job_array_main_id 
 # grab information about all jobs in the array from slurm
-# check the status of all jobs in the array
-# output list of jobs that are PENDING due to Job_requeued_in_held_state
 
-# NOTES: this can be broken up into sub-functions
-# 1) get job information into dictionary form for an array
-# 2) given information in a pickle file, read and check for held jobs
-# 3) given held jobs, release them   
+##INPUT 
+# job id
+# desired attribute (any attribute that "scontrol show job" would return about a job)
 
-# CREATES
-#  txt file for job_array_info (default path)
-#  txt file for held jobs (default path) 
-
-# DESTROYS
-#  none
+##OUTPUT
+# information of desired attribute
 
 import pandas as pd, \
        sys, \
